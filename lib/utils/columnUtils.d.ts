@@ -1,0 +1,12 @@
+import { Column, CalculatedColumn, ColumnMetrics, FormatterProps } from '../common/types';
+interface Metrics<R, SR> {
+    columns: readonly Column<R, SR>[];
+    columnWidths: ReadonlyMap<string, number>;
+    minColumnWidth: number;
+    viewportWidth: number;
+    defaultFormatter: React.ComponentType<FormatterProps<R, SR>>;
+}
+export declare function getColumnMetrics<R, SR>(metrics: Metrics<R, SR>): ColumnMetrics<R, SR>;
+export declare function canEdit<R, SR>(column: CalculatedColumn<R, SR>, row: R): boolean;
+export declare function getColumnScrollPosition<R, SR>(columns: readonly CalculatedColumn<R, SR>[], idx: number, currentScrollLeft: number, currentClientWidth: number): number;
+export {};
