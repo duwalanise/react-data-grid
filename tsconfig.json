@@ -14,10 +14,9 @@
     "pretty": true,
     "sourceMap": true,
     "strict": true,
-    "target": "es2019",
-    "types": ["jest"]
+    "target": "ES5",
+    "types": ["jest"],
+    "downlevelIteration": true
   },
-  "files": [
-    "src/index.ts"
-  ]
+  "files": ["src/index.ts"]
 }
